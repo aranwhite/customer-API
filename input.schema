@@ -1,0 +1,80 @@
+[{
+        "entity": "ProductDetail",
+        "primaryKeyColumns": ["ProductId"],
+        "columns": [
+            {
+                "name": "ProductId",
+                "generic_type": "int",
+                "nullable": false,
+                "autonum": true
+            },
+            {
+                "name": "ProductSku",
+                "generic_type": "string"
+            },
+            {
+                "name": "ProductName",
+                "generic_type": "string"
+            },
+            {
+                "name": "UnitPrice",
+                "generic_type": "decimal"
+            },
+            {
+                "name": "MaxUnitsInStock",
+                "generic_type": "int"
+            },
+            {
+                "name": "TotalUnitsInStock",
+                "generic_type": "int"
+            },
+            {
+                "name": "AllowBackOrder",
+                "generic_type": "boolean",
+                "nullable": true
+            }
+        ],
+        "parents": [],
+        "keys": [{
+            "name": "PK_ProductDetail",
+            "type": "primary",
+            "columns": ["ProductId"]
+        }]
+    },
+    {
+        "entity": "ProductLocation",
+        "primaryKeyColumns": ["BinId"],
+        "columns": [
+            {
+                "name": "BinId",
+                "generic_type": "int",
+                "nullable": false,
+                "autonum": true
+            },
+            {
+                "name": "BarcodeTagData",
+                "generic_type": "string"
+            },
+            {
+                "name": "FK_ProductDetail_ProductId",
+                "generic_type": "int",
+                "nullable": false,
+                "autonum": false
+            },
+            {
+                "name": "UnitsInStock",
+                "generic_type": "int"
+            }
+        ],
+        "parents": [{
+            "relationship_name": "ProductDetail_2_BinDetail",
+            "parent_entity": "ProductDetail",
+            "parent_column_names": ["ProductId"],
+            "child_column_names": ["FK_ProductDetail_ProductId"]
+        }],
+        "keys": [{
+            "name": "PK_BinDetail",
+            "type": "primary",
+            "columns": ["BinId"]
+        }]
+    }]
