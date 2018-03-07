@@ -1,80 +1,146 @@
-[{
-        "entity": "ProductDetail",
-        "primaryKeyColumns": ["ProductId"],
+[
+  {
+    "entity": "Customer",
+    "primaryKeyColumns": [
+      "id"
+    ],
+    "columns": [
+      {
+        "name": "id",
+        "generic_type": "number",
+        "nullable": false,
+        "db_column_type": "int(11) unsigned",
+        "subtype": "unsigned_integer",
+        "num_bytes": 4,
+        "autonum": true
+      },
+      {
+        "name": "first_name",
+        "generic_type": "string",
+        "size": 256,
+        "nullable": true,
+        "db_column_type": "varchar(256)",
+        "length": 256,
+        "fixed_size": false
+      },
+      {
+        "name": "last_name",
+        "generic_type": "string",
+        "size": 256,
+        "nullable": true,
+        "db_column_type": "varchar(256)",
+        "length": 256,
+        "fixed_size": false
+      },
+      {
+        "name": "company_name",
+        "generic_type": "string",
+        "size": 128,
+        "nullable": true,
+        "db_column_type": "varchar(128)",
+        "length": 128,
+        "fixed_size": false
+      },
+      {
+        "name": "address",
+        "generic_type": "string",
+        "size": 128,
+        "nullable": true,
+        "db_column_type": "varchar(128)",
+        "length": 128,
+        "fixed_size": false
+      },
+      {
+        "name": "city",
+        "generic_type": "string",
+        "size": 128,
+        "nullable": true,
+        "db_column_type": "varchar(128)",
+        "length": 128,
+        "fixed_size": false
+      },
+      {
+        "name": "county",
+        "generic_type": "string",
+        "size": 128,
+        "nullable": true,
+        "db_column_type": "varchar(128)",
+        "length": 128,
+        "fixed_size": false
+      },
+      {
+        "name": "state",
+        "generic_type": "string",
+        "size": 128,
+        "nullable": true,
+        "db_column_type": "varchar(128)",
+        "length": 128,
+        "fixed_size": false
+      },
+      {
+        "name": "zip",
+        "generic_type": "string",
+        "size": 128,
+        "nullable": true,
+        "db_column_type": "varchar(128)",
+        "length": 128,
+        "fixed_size": false
+      },
+      {
+        "name": "phone1",
+        "generic_type": "string",
+        "size": 128,
+        "nullable": true,
+        "db_column_type": "varchar(128)",
+        "length": 128,
+        "fixed_size": false
+      },
+      {
+        "name": "phone2",
+        "generic_type": "string",
+        "size": 128,
+        "nullable": true,
+        "db_column_type": "varchar(128)",
+        "length": 128,
+        "fixed_size": false
+      },
+      {
+        "name": "email",
+        "generic_type": "string",
+        "size": 128,
+        "nullable": true,
+        "db_column_type": "varchar(128)",
+        "length": 128,
+        "fixed_size": false
+      },
+      {
+        "name": "web",
+        "generic_type": "string",
+        "size": 128,
+        "nullable": true,
+        "db_column_type": "varchar(128)",
+        "length": 128,
+        "fixed_size": false
+      },
+      {
+        "name": "status",
+        "generic_type": "string",
+        "size": 16,
+        "nullable": true,
+        "db_column_type": "varchar(16)",
+        "length": 16,
+        "fixed_size": false
+      }
+    ],
+    "parents": [],
+    "keys": [
+      {
+        "name": "PRIMARY",
+        "type": "primary",
         "columns": [
-            {
-                "name": "ProductId",
-                "generic_type": "int",
-                "nullable": false,
-                "autonum": true
-            },
-            {
-                "name": "ProductSku",
-                "generic_type": "string"
-            },
-            {
-                "name": "ProductName",
-                "generic_type": "string"
-            },
-            {
-                "name": "UnitPrice",
-                "generic_type": "decimal"
-            },
-            {
-                "name": "MaxUnitsInStock",
-                "generic_type": "int"
-            },
-            {
-                "name": "TotalUnitsInStock",
-                "generic_type": "int"
-            },
-            {
-                "name": "AllowBackOrder",
-                "generic_type": "boolean",
-                "nullable": true
-            }
-        ],
-        "parents": [],
-        "keys": [{
-            "name": "PK_ProductDetail",
-            "type": "primary",
-            "columns": ["ProductId"]
-        }]
-    },
-    {
-        "entity": "ProductLocation",
-        "primaryKeyColumns": ["BinId"],
-        "columns": [
-            {
-                "name": "BinId",
-                "generic_type": "int",
-                "nullable": false,
-                "autonum": true
-            },
-            {
-                "name": "BarcodeTagData",
-                "generic_type": "string"
-            },
-            {
-                "name": "FK_ProductDetail_ProductId",
-                "generic_type": "int",
-                "nullable": false,
-                "autonum": false
-            },
-            {
-                "name": "UnitsInStock",
-                "generic_type": "int"
-            }
-        ],
-        "parents": [{
-            "relationship_name": "ProductDetail_2_BinDetail",
-            "parent_entity": "ProductDetail",
-            "parent_column_names": ["ProductId"],
-            "child_column_names": ["FK_ProductDetail_ProductId"]
-        }],
-        "keys": [{
-            "name": "PK_BinDetail",
-            "type": "primary",
-            "columns": ["BinId"]
-        }]
-    }]
+          "id"
+        ]
+      }
+    ]
+  }
+]
