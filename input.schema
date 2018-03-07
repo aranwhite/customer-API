@@ -3,7 +3,7 @@
         "primaryKeyColumns": ["ProductId"],
         "columns": [
             {
-                "name": "ProductId",
+                "name": "ProductId2",
                 "generic_type": "int",
                 "nullable": false,
                 "autonum": true
