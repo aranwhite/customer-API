@@ -666,6 +666,13 @@
       "required": false,
       "allowEmptyValue": false
     },
+    "id":{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "number",
+          "format": "int32"
+    },
     "deferred": {
       "name": "deferred",
       "description": "Comma-separated list of Resource.attribute names that will be returned as deferred links. This applies only to *BINARY* and *STRING* data. _'deferred'_ values take precedence over _'inline'_ and _'inlinelimit'_ values. The value is also used for transaction summaries, but database names must be used.",
