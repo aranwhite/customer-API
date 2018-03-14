@@ -558,7 +558,6 @@
       "description": "Auth Token: this is a convenience so you can do GET etc. with the value in a URL",
       "type": "string",
       "in": "query",
-      "default":"token",
       "allowEmptyValue": false
     },
     "filter": {
