@@ -1,15 +1,14 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Customers",
-    "description": "Insert comments here",
+    "title": "Lifecycle API - Customer",
     "version": "v1"
   },
-  "host": "localhost:8080",
+  "host": "34.210.71.26:8081",
   "schemes": [
     "http"
   ],
-  "basePath": "/rest/default/apiV1/v1",
+  "basePath": "/rest/default/Customer/v1",
   "consumes": [
     "application/json"
   ],
@@ -30,7 +29,7 @@
           "in": "path",
           "required": true,
           "type": "number",
-          "format": "int64"
+          "format": "int32"
         }
       ],
       "get": {
@@ -506,7 +505,7 @@
       "properties": {
         "id": {
           "type": "number",
-          "format": "int64"
+          "format": "int32"
         },
         "first_name": {
           "type": "string"
