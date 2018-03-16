@@ -15,6 +15,8 @@ scenarios:
           id: $..id
       - url: 'http://34.210.71.26:8081/rest/default/Customer/v1/main:Customer/${id_1}'
         method: GET
+        headers:
+          Authorization: 'CALiveAPICreator iWRd6RxzXQ2AjkdrhBEE:1'
 
 modules:
   cloud:
