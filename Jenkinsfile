@@ -11,11 +11,9 @@ stages {
             sh 'curl -X POST -d @input.schema http://34.212.226.36:8080/pushToLac -H "Content-Type: application/json"'
         }
     }
-    stage('Second Stage') {
+    stage('Deploy to Portal - Test') {
         steps {
-            echo 'step 2a'
-            echo 'step 2b'
-            
+            sh 'curl -X POST -d @input.schema http://34.212.226.36:8080/pushToLac -H "Content-Type: application/json"'     
         }
     }
 }
