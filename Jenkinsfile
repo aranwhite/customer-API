@@ -1,8 +1,22 @@
-node {
-   echo 'Hello World'
-   sh "docker-compose --project-name microgateway \
-                 --file mg/get-started/docker-compose/docker-compose.yml \
-                 --file mg/get-started/docker-compose/docker-compose.db.consul.yml \
-                 --file mg/get-started/docker-compose/docker-compose.lb.dockercloud.yml \
-                 up -d --build"
+pipeline{
+agent any
+stages {
+    stage('Checkout code') {
+        steps {
+            checkout scm
+        }
+    }
+    stage('Build API in Live API Creator') {
+        steps {
+            sh 'ls'
+        }
+    }
+    stage('Second Stage') {
+        steps {
+            echo 'step 2a'
+            echo 'step 2b'
+            
+        }
+    }
+}
 }
