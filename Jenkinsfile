@@ -16,5 +16,12 @@ stages {
             sh 'curl -X POST -d @swagger.json http://34.212.226.36:8080/deployToPortal -H "Content-Type: application/json"'     
         }
     }
+    stage('Build and Run Test in Blazemeter') {
+        steps {
+            sh 'curl -X POST -d @swagger.json -H "Content-Type: application/json" http://34.212.226.36:8080/startBlazeTest > file.json'
+            sh 'bzt file.json .bzt-rc'
+'     
+        }
+    }
 }
 }
