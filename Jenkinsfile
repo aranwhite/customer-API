@@ -8,7 +8,7 @@ stages {
     }
     stage('Build API in Live API Creator') {
         steps {
-            sh 'ls'
+            sh 'echo input.schema'
         }
     }
     stage('Second Stage') {
