@@ -13,7 +13,7 @@ stages {
     }
     stage('Deploy to Portal - Test') {
         steps {
-            sh 'ccurl -X POST -d @swagger.json http://34.212.226.36:8080/deployToPortal -H "Content-Type: application/json"'     
+            sh 'curl -X POST -d @swagger.json http://34.212.226.36:8080/deployToPortal -H "Content-Type: application/json"'     
         }
     }
 }
