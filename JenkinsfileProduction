@@ -6,17 +6,17 @@ stages {
             checkout scm
         }
     }
-    stage('Promote API to Production ') {
+    stage('Release API to Production ') {
         steps {
             sh 'curl -X POST -d @swagger.json http://34.212.226.36:8080/publishToProd -H "Content-Type: application/json"'
         }
     }
-    stage('Enable Application Monitoring') {
+    stage('Enable Opertaional Application Monitoring') {
         steps {
             sh 'curl -X POST -d @swagger.json http://34.212.226.36:8080/enablePAPIM -H "Content-Type: application/json"'     
         }
     }
-    stage('Enable Cloud based API Monitoring') {
+    stage('Enable Opertaional Cloud based API Monitoring') {
         steps {
             sh 'curl -X POST -d @swagger.json -H "Content-Type: application/json" http://34.212.226.36:8080/enableRunscope'     
         }
