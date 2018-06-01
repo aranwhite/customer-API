@@ -16,12 +16,12 @@ stages {
             sh 'curl -X POST -d @swagger.json http://34.212.226.36:8080/deployToPortal -H "Content-Type: application/json"'     
         }
     }
-    stage('Build Test') {
+    stage('Build Tests') {
         steps {
             sh 'curl -X POST -d @swagger.json -H "Content-Type: application/json" http://34.212.226.36:8080/startBlazeTest > file.json'     
         }
     }
-    stage('Run Fucntional Test ') {
+    stage('Run Tests ') {
         steps {
             sh 'bzt file.json .bzt-rc'     
         }
