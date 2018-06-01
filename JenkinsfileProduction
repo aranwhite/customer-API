@@ -6,7 +6,7 @@ stages {
             checkout scm
         }
     }
-    stage('Release API to Production ') {
+    stage('Release and Secure API') {
         steps {
             sh 'curl -X POST -d @swagger.json http://34.212.226.36:8080/publishToProd -H "Content-Type: application/json"'
         }
