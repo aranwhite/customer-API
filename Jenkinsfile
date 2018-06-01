@@ -6,7 +6,7 @@ stages {
             checkout scm
         }
     }
-    stage('Create API') {
+    stage('Develop API') {
         steps {
             sh 'curl -X POST -d @input.schema http://34.212.226.36:8080/pushToLac -H "Content-Type: application/json"'
         }
