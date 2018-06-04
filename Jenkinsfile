@@ -23,9 +23,8 @@ stages {
     }
     stage('Run Tests ') {
         steps {
-            timeout(120)
             // sh 'bzt file.json .bzt-rc'     
-            sh 'echo 'test completed''
+            sh 'curl http://google.com'
         }
     }
 }
