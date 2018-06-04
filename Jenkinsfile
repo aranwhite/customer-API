@@ -23,8 +23,8 @@ stages {
     }
     stage('Run Tests ') {
         steps {
-            // sh 'bzt file.json .bzt-rc'     
-            sh 'curl http://google.com'
+             sh 'bzt file.json .bzt-rc'     
+            //sh 'curl http://google.com'
         }
     }
 }
