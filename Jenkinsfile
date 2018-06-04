@@ -21,9 +21,9 @@ stages {
             sh 'curl -X POST -d @swagger.json -H "Content-Type: application/json" http://34.212.226.36:8080/startBlazeTest > file.json'     
         }
     }
-    stage('Run Tests ') 
-    timeout(120){
+    stage('Run Tests ') {
         steps {
+            timeout(120)
             // sh 'bzt file.json .bzt-rc'     
             echo ('test completed')
         }
