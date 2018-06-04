@@ -25,7 +25,7 @@ stages {
         steps {
             timeout(120)
             // sh 'bzt file.json .bzt-rc'     
-            echo ('test completed')
+            sh 'echo 'test completed''
         }
     }
 }
