@@ -23,8 +23,9 @@ stages {
     }
     stage('Run Unit Tests ') {
         steps {
-             sh 'bzt file.json .bzt-rc'     
-            //sh 'curl http://google.com'
+             //sh 'bzt file.json .bzt-rc'     
+            sh 'curl http://google.com'
+            sh 'sleep 45'
         }
     }
 }
