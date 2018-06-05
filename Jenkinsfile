@@ -25,7 +25,7 @@ stages {
         steps {
              //sh 'bzt file.json .bzt-rc'     
             sh 'curl http://google.com'
-            sh 'sleep 45'
+            sh 'sleep 24'
         }
     }
 }
