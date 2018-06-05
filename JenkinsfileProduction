@@ -11,12 +11,12 @@ stages {
             sh 'curl -X POST -d @swagger.json http://34.212.226.36:8080/publishToProd -H "Content-Type: application/json"'
         }
     }
-    stage('Enable Opertaional Application Monitoring') {
+    stage('Enable Monitoring - PAPIM') {
         steps {
             sh 'curl -X POST -d @swagger.json http://34.212.226.36:8080/enablePAPIM -H "Content-Type: application/json"'     
         }
     }
-    stage('Enable Opertaional Cloud based API Monitoring') {
+    stage('Enable Monitoring - Runscope'') {
         steps {
             sh 'curl -X POST -d @swagger.json -H "Content-Type: application/json" http://34.212.226.36:8080/enableRunscope'     
         }
