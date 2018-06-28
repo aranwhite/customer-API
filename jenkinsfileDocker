@@ -1,0 +1,18 @@
+pipeline{
+agent any
+stages {
+    stage('Checkout code') {
+        steps {
+            checkout scm
+        }
+    }
+    stage('Create API') {
+        steps {
+            sh '/usr/local/bin/docker-compose -f docker-compose-mysql-4_1.yml up'
+        }
+    }
+    
+   
+    
+}
+}
