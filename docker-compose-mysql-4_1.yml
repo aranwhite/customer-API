@@ -17,7 +17,7 @@ services:
     links:
       - "lac_db:database"
     ports:
-      - "8090:8090"
+      - "8090:8080"
     expose:
       - "8090"
   lac_db:
