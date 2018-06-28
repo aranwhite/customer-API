@@ -17,9 +17,9 @@ services:
     links:
       - "lac_db:database"
     ports:
-      - "8080:8080"
+      - "8090:8090"
     expose:
-      - "8080"
+      - "8090"
   lac_db:
     image: mysql:5.7
     privileged: true
