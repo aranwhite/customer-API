@@ -6,11 +6,11 @@ stages {
             checkout scm
         }
     }
-    stage('Create API') {
+/*    stage('Create API') {
         steps {
             sh '/usr/local/bin/docker-compose -f docker-compose-mysql-4_1.yml up'
         }
-    }
+    } */
     stage('Wait for LAC') {
         steps {
         timeout(5) {
