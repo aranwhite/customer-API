@@ -35,14 +35,12 @@ stages {
     }
     stage('Build Tests') {
         steps {
-            sh 'curl -X POST -d @swagger.json -H "Content-Type: application/json" http://34.212.226.36:8080/startBlazeTest > file.json'     
+            sh 'curl -X POST -d @swagger.json -H "Content-Type: application/json" http://34.212.226.36:8080/buildBlazeTest > file.json'     
         }
     }
     stage('Run Unit Tests ') {
         steps {
-             //sh 'bzt file.json .bzt-rc'     
-            sh 'curl http://google.com'
-            sh 'sleep 24'
+            sh 'bzt file.json .bzt-rc'     
         }
     }
     */
