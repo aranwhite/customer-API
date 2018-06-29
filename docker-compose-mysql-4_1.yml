@@ -11,6 +11,7 @@ services:
       RDS_USERNAME: "lac_admin"
       RDS_PASSWORD: "Password1"
       RDS_DB_NAME: "lacadmindb"
+      CATALINA_OPTS: "--add-modules java.xml.bind $CATALINA_OPTS"
       ca_accept_license: "enu"
       LAC_ADMIN_MAX_CONN: "100"
     links:
@@ -18,7 +19,7 @@ services:
     ports:
       - "8081:8080"
     expose:
-      - "8080"
+      - "8081"
   lac_db:
     image: mysql:5.7
     privileged: true
@@ -31,14 +32,14 @@ services:
       - "3306"
 
 ## Ports mapped to host
-    ports:
-      - "3306:3306"
+#    ports:
+#      - "3306:3306"
 #      - "host:container" # generic port mapping example
 
 ## Uncomment selected lines for reliable persistence (no spaces!)
-    volumes:
-      - "data_volume:/var/lib/mysql" # persisted data volume example
-      - "conf_volume:/etc/mysql/conf.d" # mysql *.cnf dir
-volumes:
-  data_volume: {}
-  conf_volume: {}
+#    volumes:
+#      - "data_volume:/var/lib/mysql" # persisted data volume example
+#      - "conf_volume:/etc/mysql/conf.d" # mysql *.cnf dir
+#volumes:
+#  data_volume: {}
+#  conf_volume: {}
