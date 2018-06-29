@@ -1,7 +1,7 @@
 version: "2"
 services:
   lac:
-    image: caliveapicreator/4.0.01
+    image: caliveapicreator/4.1.00
     privileged: true
     stdin_open: true
     tty: true
