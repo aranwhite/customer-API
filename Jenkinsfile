@@ -28,12 +28,12 @@ stages {
             sh 'curl -X POST -d @input.schema http://34.212.226.36:8080/pushToLac -H "Content-Type: application/json"'
         }
     }
-   /* stage('Deploy API to Test') {
+   stage('Deploy API to Test') {
         steps {
             sh 'curl -X POST -d @swagger.json http://34.212.226.36:8080/deployToPortal -H "Content-Type: application/json"'     
         }
     }
-    */
+    /*
     stage('Build Tests') {
         steps {
             sh 'curl -X POST -d @swagger.json -H "Content-Type: application/json" http://34.212.226.36:8080/buildBlazeTest > file.json'     
@@ -44,6 +44,7 @@ stages {
             sh 'bzt file.json .bzt-rc'     
         }
     }
+    */
    
 }
 }
