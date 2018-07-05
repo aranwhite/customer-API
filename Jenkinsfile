@@ -36,7 +36,8 @@ stages {
     }
     stage('Run Unit Tests ') {
         steps {
-            sh 'bzt file.json .bzt-rc'     
+           /* sh 'bzt file.json .bzt-rc'     */
+            sh 'sleep 12'
         }
     }
 
