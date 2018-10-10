@@ -6,7 +6,7 @@ stages {
             checkout scm
         }
     }
-/   stage('Build API Server') {
+   stage('Build API Server') {
         steps {
             sh '/usr/local/bin/docker-compose -f docker-compose-mysql-4_1.yml up -d'
             timeout(5) {
