@@ -1,7 +1,7 @@
 version: "2"
 services:
   lac:
-    image: caliveapicreator/5.0.00
+    image: caliveapicreator/4.1.00
     privileged: true
     stdin_open: true
     tty: true
@@ -14,6 +14,7 @@ services:
       CATALINA_OPTS: "--add-modules java.xml.bind $CATALINA_OPTS"
       ca_accept_license: "enu"
       LAC_ADMIN_MAX_CONN: "100"
+      LAC_DEFAULT_LICENSE_FILE: "./License.txt"
     links:
       - "lac_db:database"
     ports:
