@@ -14,7 +14,7 @@ services:
       CATALINA_OPTS: "--add-modules java.xml.bind $CATALINA_OPTS"
       ca_accept_license: "enu"
       LAC_ADMIN_MAX_CONN: "100"
-      LAC_DEFAULT_LICENSE_FILE: "./License.txt"
+      LAC_DEFAULT_LICENSE_FILE: "/License.txt"
     volumes:
       - ./License.txt:/License.txt
     links:
