@@ -6,7 +6,7 @@ stages {
             checkout scm
         }
     }
-/*   stage('Build API Server') {
+  stage('Build API Server') {
         steps {
             sh '/usr/local/bin/docker-compose -f docker-compose-mysql-4_1.yml up -d'
             timeout(5) {
@@ -18,8 +18,7 @@ stages {
                }
            }
         }
-    } 
-  */  
+    }   
     stage('Create API') {
         steps {
             sh 'curl -X POST -d @input.schema http://34.212.226.36:8080/pushToLac -H "Content-Type: application/json"'
